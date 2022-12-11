@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cep API </title>
+
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <script src="./JS/script.js" defer></script>
+
+</head>
+<body>
+
+    <main>
+
+        <div class="inputs-area">
+
+            <h3> Preencha esses dados </h3>
+
+            <div class="getDatas-area">
+
+                <textarea id="input-estado" maxlength="2" placeholder="Estado (Sigla): "></textarea>
+                <textarea id="input-cidade" maxlength="30" placeholder="Cidade: "></textarea>
+                <textarea id="input-rua" maxlength="35" placeholder="Rua (Completo): "></textarea>
+    
+            </div>
+
+            <button onclick="getData()"> Enviar! </button>
+
+        </div>
+
+        <div class="answer-area" id="answer-area">
+
+            <h3> Suas Informações </h3>
+
+            <table>
+
+                <tr>
+                    <th> Estado </th>
+                    <th> Localidade </th>
+                    <th> Bairro </th>
+                </tr>
+                <tr>
+                    <td id="estado"> Carregando </td>
+                    <td id="localidade"> Carregando </td>
+                    <td id="bairro"> Carregando </td>
+                </tr>
+
+            </table>
+
+            <table>
+
+                <tr>
+                    <th> Logradouro </th>
+                    <th> CEP </th>
+                    <th> DDD </th>
+                </tr>
+                <tr>
+                    <td id="logradouro"> Carregando </td>
+                    <td id="cep"> Carregando </td>
+                    <td id="ddd"> Carregando </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
