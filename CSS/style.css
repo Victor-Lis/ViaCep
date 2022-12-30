@@ -1,168 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 *{
 
-    font-family: 'Ubuntu', sans-serif;
     padding: 0;
     margin: 0;
-
-}
-
-h3{
-
-    filter: drop-shadow(0px 0px 3px #ababab);
-    padding: 3%;
-    background-color: #fff;
-    border-radius: 5px;
-
-}
-
-body{
-
-    height: 100vh;
-    width: 100%;
-    background: radial-gradient(50vw, rgb(204, 204, 204), rgb(211, 218, 221));
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
 
 }
 
 main{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    width: 90%;
-
-}
-
-.inputs-area{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    width: 90%;
-    background-color: #d6e6e4;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 1px #b9f1eb;
-
-}
-
-.getDatas-area{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    width: 90%;
-
-}
-
-.getDatas-area > textarea{
-
-    outline: none;
-    border: none;
-    resize: none;
-    border-radius: 10px;
-    padding: 3%;
-    min-width: 30%;
-    margin: 2%;
-    font-size: 0.7rem;
-
-}
-
-.inputs-area > button{
-
-    padding: 05%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    transition: 1s;
-    box-shadow: 0px 0px 5px 1px #fff;
-
-}
-
-.inputs-area > button:hover{
-
-    background-color: #000;
-    color: #fff;
-    transition: 1s;
-    scale: 110%;
-    box-shadow: 0px 0px 5px 5px #000;
-
-}
-
-.answer-area{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-    width: 90%;
-    margin-top: 05%;
-    background-color: #d6e6e4;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 1px #b9f1eb;
-
-}
-
-table{
-
+    
+    height: 100vh;
     width: 100%;
-    font-size: 0.8rem;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 5%;
-
-} 
-
-table > tbody > tr > th{
-
-    padding: 2%;
-    width: 30%;
-    border-radius: 5px;
-    background-color: #000;
-    color: #fff;
+    background-color: #f5f5e3;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
 }
 
-table > tbody > tr > td{
+.perguntas{
 
-    padding: 2%;
-    width: 33%;
-    border-radius: 5px;
-    color: #000;
+    width: 96%;
+    padding: 02%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Se eu escolhi coluna, o justify-content mexe na coluna
+       Se eu escolhi linha, o justify-content mexe na linha */
+    justify-content: space-around;
+
+    /*space-around: ele tenta igualar os espaços */
+    /*space-between: ele tenta igualar os espaços mas não nas pontas*/
+
+
+    /* Se eu escolhi coluna, o justify-content mexe na linha
+       Se eu escolhi linha, o justify-content mexe na coluna */
+    align-items: center;
+
+}
+
+.inputs{
+
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    width: 90%;
+
+}
+
+.inputs > textarea{
+
+    resize: none;
+    width: 26%;
+    padding: 1%;
+
+    border-radius: 10px;
+
+    /* min-width: 150px; */
+
+    max-width: 150px;
+    max-height: 30px;
+
+    animation: trocar-cor 2s linear infinite;
+
+}
+
+.perguntas > button{
+
+    margin-top: 1%;
+    width: 20%;
+    max-width: 80px;
+    min-height: 25px; 
+    border-radius: 10px;
+    transition: 2s;
+
     background-color: #fff;
+    color: rgb(0, 0, 0);
+    
+    animation: trocar-cor 2s linear infinite;
 
 }
 
-@media(min-width: 750px){
+.perguntas > button:hover{
 
-    h3{
+    transition: 2s;
 
-        padding: 1.5%;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    
+    animation: 2s rotate linear;
+
+}
+
+@keyframes rotate{
+    
+    0%{
+
+        transform: rotate(0deg);
+        scale: 100%;
+        box-shadow: 0px 0px 1px 1px red;
 
     }
 
-    .getDatas-area > textarea{
+    25%{
 
-        padding: 1.5%;
+        box-shadow: 0px 0px 10px 1px blue;
+
+    }
+
+    50%{
+
+        scale: 5%;
+        box-shadow: 0px 0px 10px 1px yellow;
 
     }
 
-    .inputs-area > button{
+    75%{
 
-        padding: 3%;
-        padding-top: 1.5%;
-        padding-bottom: 1.5%;
+        box-shadow: 0px 0px 10px 1px green;
 
     }
+
+    100%{
+
+        transform: rotate(360deg);
+        scale: 100%;
+        box-shadow: 0px 0px 10px 1px red;
+
+    }
+
+}
+
+@keyframes trocar-cor {
+
+    0%{
+
+        box-shadow: 0px 0px 1px 1px red;
+
+    }
+    
+    25%{
+
+        box-shadow: 0px 0px 1px 1px blue;
+
+    }
+    
+    50%{
+
+        box-shadow: 0px 0px 1px 1px yellow;
+
+    }
+
+    75%{
+
+        box-shadow: 0px 0px 1px 1px green;
+
+    }
+
+    100%{
+
+        box-shadow: 0px 0px 1px 1px red;
+
+    }
+
+}
+
+.respostas{
+
+    width: 96%;
+    padding: 02%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cards{
+
+    max-width: 400px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 2%;
+    gap: 2%;
+    align-items: center;
+}
+
+.card{
+
+    margin-top: 02%;
+    max-width: 200px;
+    padding: 2%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    color: #000;
+    animation: trocar-cor 2s linear infinite;
 
 }
