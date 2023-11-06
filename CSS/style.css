@@ -56,8 +56,7 @@ main{
     justify-content: center;
     gap: 4%;
 
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 2% 0;
 
     width: 90%;
 
@@ -157,6 +156,5 @@ main{
     align-items: center;
     gap: 2%;
     color: #fff;
-    animation: trocar-cor 2s linear infinite;
 
 }
