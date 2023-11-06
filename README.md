@@ -40,51 +40,6 @@ main{
 }
 ```
 
-#### Primeiras vezes usando "display: flex".
-```css
-.respostas{
-  width: 96%;
-  padding: 02%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border: 2px solid #fff;
-  max-width: 450px;
-  border-radius: 10px;
-  margin: 15px 0;
-  padding: 2% 0;
-  color: #fff;
-}
-
-...
-
-.cards{
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-top: 2%;
-  gap: 2%;
-  align-items: center;
-}
-```
-
-#### Preencher a tag <select/> ao carregar a página.
-Nesse caso eu chamo uma função que preenche a tag <select/> mapeando um array e usando o método "innerHTML".
-```javascript
-function preencherSelect() {
-  let estados = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
-  let sigla = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
-
-  estados.map((estado, index) => {
-    document.getElementById("estado").innerHTML += `<option value="${sigla[index]}">${estados[index]}</option>`
-  })
-}
-```
-
 # Resultado
 
 ![Form Vazio](https://github.com/Victor-Lis/ViaCep/blob/main/Screenshots/empty.png)
