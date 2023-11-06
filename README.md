@@ -72,7 +72,7 @@ main{
 }
 ```
 
-#### Preencher a tag <select/> ao carregar a página.
+#### Preencher a tag select ao carregar a página.
 Nesse caso eu chamo uma função que preenche a tag select mapeando um array e usando o método "innerHTML".
 ```javascript
 function preencherSelect() {
