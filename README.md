@@ -1,7 +1,7 @@
 
 # ViaCep API
 
-Esse é um projeto simples usando a [ViaCep API](https://viacep.com.br/), embora sendo simples foi meu 2° ou 3° contato com requisições HTTP e também minha 2° ou 3° vez recebendo dados da Web, até então (10/12/2022, data da criação da pasta do projeto) nunca havia realizado tal feito, realizei esse projeto pois um amigo meu que estuda na Etec e faz DS(Desenvolvimento de Sistemas) assim como eu, estava com dificuldades na matéria de PW(Programação Web), então fiz esse projeto para ajudá-lo.
+Esse é um projeto simples usando a [ViaCep API](https://viacep.com.br/), embora sendo simples foi meu 2° ou 3° contato com requisições HTTP e também minha 2° ou 3° vez recebendo dados da Web, até então (10/12/2022, data da criação da pasta do projeto) não havia tido tanto contado com tais feito, realizei esse projeto pois um amigo meu que estuda na Etec e faz DS(Desenvolvimento de Sistemas) assim como eu, estava com dificuldades na matéria de PW(Programação Web), então fiz esse projeto para ajudá-lo.
 
 
 
