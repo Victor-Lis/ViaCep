@@ -11,6 +11,7 @@ Acredito que meus principais desafios nesse projeto foram:
 - Uma das minhas primeiras vezes usando display: "flex" e medidas responsivas.
 - Ainda não tinha tanto conhecimento sobre trabalhar com Arrays ou Objetos então foi um desafio trabalhar com o método "map".
 - Preencher a tag <select/> com os nomes dos estados como texto e value suas siglas / abreviações.
+
 ## Aprendizados
 
 Por final aprendi algumas coisas interessantes como: 
@@ -25,18 +26,6 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-...
-
-
-.inputs{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4%;
-  margin: 2% 0;
-  width: 90%;
 }
 ```
 
