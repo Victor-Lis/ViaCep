@@ -4,13 +4,36 @@ async function enviar() {
 
     var estado = document.getElementById("estado").value
     var cidade = document.getElementById("cidade").value
-    var rua = document.getElementById("rua").value
+    var rua = document.getElementById("rua").value  
+    let loading = true
+
+    document.querySelector("#buttonSubmit").innerText = "Carregando"
+
+    let interval = setInterval(() => {
+
+        if(document.querySelector("#buttonSubmit").innerText != "Carregando..."){
+
+            document.querySelector("#buttonSubmit").innerText +="."
+
+        }else{
+
+            document.querySelector("#buttonSubmit").innerText = "Carregando"
+
+        }
+
+    }, 100)
 
     if (!!estado || !!cidade || !!rua) {
 
         var resposta = await fetch(`https://viacep.com.br/ws/${estado}/${cidade}/${rua}/json/`)
 
         var dados = await resposta.json()
+
+        if(!!dados){
+
+            clearInterval(interval)
+
+        }
 
         main.style.height = "auto"
 
@@ -29,7 +52,7 @@ async function enviar() {
 
             </div>
 
-            <button onclick="enviar()"> Enviar! </button>
+            <button onclick="enviar()" id="buttonSubmit"> Enviar! </button>
 
         </div>
 
